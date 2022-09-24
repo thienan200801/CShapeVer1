@@ -49,7 +49,8 @@ namespace Ver1
                 }
             }
         }
-        public void filter2()
+        
+        public void filter2(float[][] data)
         {
             if (!opened)
             {
@@ -61,14 +62,7 @@ namespace Ver1
                 Bitmap bmpInverted = new Bitmap(img.Width, img.Height);
 
                 ImageAttributes ia = new ImageAttributes();
-                ColorMatrix cmPicture = new ColorMatrix(new float[][]
-                {
-                    new float[] {.393f, .349f+0.5f, .272f, 0, 0},
-                    new float[] {.769f+0.3f, .686f, .534f, 0, 0},
-                    new float[] {.189f, .168f, .131f+0.5f, 0, 0},
-                    new float[] {0, 0, 0, 1, 0},
-                    new float[] {0, 0, 0, 0, 1},
-                });
+                ColorMatrix cmPicture = new ColorMatrix(data);
                 ia.SetColorMatrix(cmPicture);
                 Graphics g = Graphics.FromImage(bmpInverted);
                 g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia);
@@ -153,11 +147,6 @@ namespace Ver1
             reload();
         }
 
-        private void b2_Click(object sender, EventArgs e)
-        {
-            reload();
-            filter2();
-        }
 
         private void red_track(object sender, EventArgs e)
         {
@@ -172,6 +161,190 @@ namespace Ver1
         private void blue_track(object sender, EventArgs e)
         {
             Hue();
+        }
+        private void b2_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[] {.393f, .349f+0.5f, .272f, 0, 0},
+                    new float[] {.769f+0.3f, .686f, .534f, 0, 0},
+                    new float[] {.189f, .168f, .131f+0.5f, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {0, 0, 0, 0, 1},
+                }
+                );
+        }
+
+        private void b3_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{.393f, .349f, .272f, 0, 0},
+                    new float[]{.769f, .686f, .534f, 0, 0},
+                    new float[]{.189f, .168f, .131f, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 1}
+                }
+                );
+        }
+
+        private void b4_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{0.299f, 0.299f, 0.299f, 0, 0},
+                    new float[]{0.587f, 0.587f, 0.587f, 0, 0},
+                    new float[]{0.114f, 0.114f, 0.114f, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 0}
+                }
+                );
+        }
+
+        private void b5_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{1+0.3f, 0, 0, 0, 0},
+                    new float[]{0, 1+0f, 0, 0, 0},
+                    new float[]{0, 0, 1+5f, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 1}
+                }
+                );
+        }
+
+        private void b6_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{1+0.9f, 0, 0, 0, 0},
+                    new float[]{0, 1+1.5f, 0, 0, 0},
+                    new float[]{0, 0, 1+1.3f, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 1}
+                }
+                );
+        }
+
+        private void b7_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{1+0.3f, 0, 0, 0, 0},
+                    new float[]{0, 1+0.7f, 0, 0, 0},
+                    new float[]{0, 0, 1+1.3f, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 1}
+                }
+                );
+        }
+
+        private void b8_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{1,0,0,0,0},
+                    new float[]{0,1,0,0,0},
+                    new float[]{0,0,1,0,0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 1, 0, 1}
+                }
+                );
+        }
+
+        private void b9_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[]{.393f+0.3f, .349f, .272f, 0, 0},
+                    new float[]{.769f, .686f+0.2f, .534f, 0, 0},
+                    new float[]{.189f, .168f, .131f+0.9f, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 1}
+                }
+                );
+        }
+
+        private void b10_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[] {.38f, .349f, .24f, 0, 0},
+                    new float[] {.769f, .624f, .534f, 0, 0},
+                    new float[] {.189f, .100f, .131f, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {0, 0, 0, 0, 1},
+                }
+                );
+        }
+
+        private void b11_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[] {.3f, .4f+0.5f, .2f, 0, 0},
+                    new float[] {.5f, .6f, .534f, 0, 0},
+                    new float[] {.1f, .1f, .1f+0.5f, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {0, 0, 0, 0, 1},
+                }
+                );
+        }
+
+        private void b12_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[] {.5f, .35f, .27f, 0, 0},
+                    new float[] {.73f, .686f+.33f, .54f, 0, 0},
+                    new float[] {.189f, .168f, .135f, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {0, 0, 0, 0, 1},
+                }
+                );
+        }
+
+        private void b14_Click(object sender, EventArgs e)
+        {
+            reload();
+            filter2(
+                new float[][]
+                {
+                    new float[] {.393f, .349f+0.5f, .272f, 0, 0},
+                    new float[] {.769f+0.3f, .686f, .534f, 0, 0},
+                    new float[] {.189f, .168f, .131f+0.5f, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {0, 0, 0, 0, 1},
+                }
+                );
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -55,6 +55,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btn_exit = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.red_trackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.green_trackBar)).BeginInit();
@@ -103,6 +104,7 @@
             this.b4.TabIndex = 4;
             this.b4.Text = "Gray";
             this.b4.UseVisualStyleBackColor = true;
+            this.b4.Click += new System.EventHandler(this.b4_Click);
             // 
             // b3
             // 
@@ -113,6 +115,7 @@
             this.b3.TabIndex = 3;
             this.b3.Text = "Artistic";
             this.b3.UseVisualStyleBackColor = true;
+            this.b3.Click += new System.EventHandler(this.b3_Click);
             // 
             // b6
             // 
@@ -123,6 +126,7 @@
             this.b6.TabIndex = 6;
             this.b6.Text = "Flash";
             this.b6.UseVisualStyleBackColor = true;
+            this.b6.Click += new System.EventHandler(this.b6_Click);
             // 
             // b5
             // 
@@ -133,6 +137,7 @@
             this.b5.TabIndex = 5;
             this.b5.Text = "Spike";
             this.b5.UseVisualStyleBackColor = true;
+            this.b5.Click += new System.EventHandler(this.b5_Click);
             // 
             // b8
             // 
@@ -141,8 +146,9 @@
             this.b8.Name = "b8";
             this.b8.Size = new System.Drawing.Size(75, 23);
             this.b8.TabIndex = 8;
-            this.b8.Text = "Suji";
+            this.b8.Text = "Winter";
             this.b8.UseVisualStyleBackColor = true;
+            this.b8.Click += new System.EventHandler(this.b8_Click);
             // 
             // b7
             // 
@@ -153,6 +159,7 @@
             this.b7.TabIndex = 7;
             this.b7.Text = "Frozen";
             this.b7.UseVisualStyleBackColor = true;
+            this.b7.Click += new System.EventHandler(this.b7_Click);
             // 
             // b10
             // 
@@ -163,6 +170,7 @@
             this.b10.TabIndex = 10;
             this.b10.Text = "Bleach";
             this.b10.UseVisualStyleBackColor = true;
+            this.b10.Click += new System.EventHandler(this.b10_Click);
             // 
             // b9
             // 
@@ -173,6 +181,7 @@
             this.b9.TabIndex = 9;
             this.b9.Text = "Dramatic";
             this.b9.UseVisualStyleBackColor = true;
+            this.b9.Click += new System.EventHandler(this.b9_Click);
             // 
             // b12
             // 
@@ -181,8 +190,9 @@
             this.b12.Name = "b12";
             this.b12.Size = new System.Drawing.Size(75, 23);
             this.b12.TabIndex = 12;
-            this.b12.Text = "Silvertone";
+            this.b12.Text = "Hedge";
             this.b12.UseVisualStyleBackColor = true;
+            this.b12.Click += new System.EventHandler(this.b12_Click);
             // 
             // b11
             // 
@@ -193,6 +203,7 @@
             this.b11.TabIndex = 11;
             this.b11.Text = "Vivid";
             this.b11.UseVisualStyleBackColor = true;
+            this.b11.Click += new System.EventHandler(this.b11_Click);
             // 
             // b14
             // 
@@ -201,8 +212,9 @@
             this.b14.Name = "b14";
             this.b14.Size = new System.Drawing.Size(75, 23);
             this.b14.TabIndex = 14;
-            this.b14.Text = "Hedge";
+            this.b14.Text = "Silvertone";
             this.b14.UseVisualStyleBackColor = true;
+            this.b14.Click += new System.EventHandler(this.b14_Click);
             // 
             // red_trackBar
             // 
@@ -239,7 +251,7 @@
             this.effectToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1062, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1062, 28);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -314,11 +326,22 @@
             this.label3.TabIndex = 26;
             this.label3.Text = "BLUE";
             // 
+            // btn_exit
+            // 
+            this.btn_exit.Location = new System.Drawing.Point(952, 35);
+            this.btn_exit.Name = "btn_exit";
+            this.btn_exit.Size = new System.Drawing.Size(75, 50);
+            this.btn_exit.TabIndex = 27;
+            this.btn_exit.Text = "Exit";
+            this.btn_exit.UseVisualStyleBackColor = true;
+            this.btn_exit.Click += new System.EventHandler(this.btn_exit_Click);
+            // 
             // AddEffect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 653);
+            this.Controls.Add(this.btn_exit);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -383,5 +406,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btn_exit;
     }
 }

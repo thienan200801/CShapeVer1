@@ -201,6 +201,11 @@ namespace Ver1
             newEffect.Show();
         }
 
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void pic_MouseUp(object sender, MouseEventArgs e)
         {
             paint = false;
