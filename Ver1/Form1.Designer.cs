@@ -32,30 +32,30 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic = new System.Windows.Forms.PictureBox();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.effectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pic_color = new System.Windows.Forms.PictureBox();
+            this.color_picker = new System.Windows.Forms.PictureBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btn_color = new System.Windows.Forms.Button();
+            this.btn_fill = new System.Windows.Forms.Button();
+            this.btn_pencil = new System.Windows.Forms.Button();
+            this.btn_eraser = new System.Windows.Forms.Button();
+            this.btn_ellipse = new System.Windows.Forms.Button();
+            this.btn_rect = new System.Windows.Forms.Button();
+            this.btn_line = new System.Windows.Forms.Button();
+            this.btn_text = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.panel1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_color)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.color_picker)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,19 +64,19 @@
             this.panel1.Controls.Add(this.richTextBox1);
             this.panel1.Controls.Add(this.comboBox2);
             this.panel1.Controls.Add(this.comboBox1);
-            this.panel1.Controls.Add(this.button10);
-            this.panel1.Controls.Add(this.button9);
-            this.panel1.Controls.Add(this.button8);
-            this.panel1.Controls.Add(this.button7);
-            this.panel1.Controls.Add(this.button6);
-            this.panel1.Controls.Add(this.button5);
-            this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
+            this.panel1.Controls.Add(this.btn_text);
+            this.panel1.Controls.Add(this.btn_line);
+            this.panel1.Controls.Add(this.btn_rect);
+            this.panel1.Controls.Add(this.btn_ellipse);
+            this.panel1.Controls.Add(this.btn_eraser);
+            this.panel1.Controls.Add(this.btn_pencil);
+            this.panel1.Controls.Add(this.btn_fill);
+            this.panel1.Controls.Add(this.btn_color);
             this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.button1);
-            this.panel1.Controls.Add(this.pictureBox3);
-            this.panel1.Controls.Add(this.pictureBox2);
+            this.panel1.Controls.Add(this.color_picker);
+            this.panel1.Controls.Add(this.pic_color);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
@@ -104,14 +104,14 @@
             this.panel2.Size = new System.Drawing.Size(1361, 23);
             this.panel2.TabIndex = 2;
             // 
-            // pictureBox1
+            // pic
             // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 150);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(1361, 478);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
+            this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pic.Location = new System.Drawing.Point(0, 150);
+            this.pic.Name = "pic";
+            this.pic.Size = new System.Drawing.Size(1361, 478);
+            this.pic.TabIndex = 3;
+            this.pic.TabStop = false;
             // 
             // fileToolStripMenuItem
             // 
@@ -125,28 +125,28 @@
             this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.effectToolStripMenuItem.Text = "Effect";
             // 
-            // pictureBox2
+            // pic_color
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.White;
-            this.pictureBox2.Location = new System.Drawing.Point(366, 19);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox2.TabIndex = 0;
-            this.pictureBox2.TabStop = false;
+            this.pic_color.BackColor = System.Drawing.Color.White;
+            this.pic_color.Location = new System.Drawing.Point(375, 19);
+            this.pic_color.Name = "pic_color";
+            this.pic_color.Size = new System.Drawing.Size(50, 50);
+            this.pic_color.TabIndex = 0;
+            this.pic_color.TabStop = false;
             // 
-            // pictureBox3
+            // color_picker
             // 
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(12, 15);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(331, 90);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 1;
-            this.pictureBox3.TabStop = false;
+            this.color_picker.Image = ((System.Drawing.Image)(resources.GetObject("color_picker.Image")));
+            this.color_picker.Location = new System.Drawing.Point(12, 15);
+            this.color_picker.Name = "color_picker";
+            this.color_picker.Size = new System.Drawing.Size(331, 90);
+            this.color_picker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.color_picker.TabIndex = 1;
+            this.color_picker.TabStop = false;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(350, 82);
+            this.button1.Location = new System.Drawing.Point(355, 82);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(19, 23);
             this.button1.TabIndex = 2;
@@ -155,7 +155,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(413, 82);
+            this.button2.Location = new System.Drawing.Point(418, 82);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(19, 23);
             this.button2.TabIndex = 3;
@@ -164,130 +164,131 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(373, 82);
+            this.textBox1.Location = new System.Drawing.Point(378, 83);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(36, 22);
             this.textBox1.TabIndex = 4;
             // 
-            // button3
+            // btn_color
             // 
-            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
-            this.button3.Location = new System.Drawing.Point(460, 23);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 75);
-            this.button3.TabIndex = 5;
-            this.button3.Text = "Color";
-            this.button3.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_color.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_color.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_color.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_color.ForeColor = System.Drawing.Color.White;
+            this.btn_color.Image = ((System.Drawing.Image)(resources.GetObject("btn_color.Image")));
+            this.btn_color.Location = new System.Drawing.Point(460, 23);
+            this.btn_color.Name = "btn_color";
+            this.btn_color.Size = new System.Drawing.Size(75, 75);
+            this.btn_color.TabIndex = 5;
+            this.btn_color.Text = "Color";
+            this.btn_color.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_color.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // btn_fill
             // 
-            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Image = ((System.Drawing.Image)(resources.GetObject("button4.Image")));
-            this.button4.Location = new System.Drawing.Point(541, 23);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 75);
-            this.button4.TabIndex = 6;
-            this.button4.Text = "Fill";
-            this.button4.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button4.UseVisualStyleBackColor = true;
+            this.btn_fill.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_fill.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_fill.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_fill.ForeColor = System.Drawing.Color.White;
+            this.btn_fill.Image = ((System.Drawing.Image)(resources.GetObject("btn_fill.Image")));
+            this.btn_fill.Location = new System.Drawing.Point(541, 23);
+            this.btn_fill.Name = "btn_fill";
+            this.btn_fill.Size = new System.Drawing.Size(75, 75);
+            this.btn_fill.TabIndex = 6;
+            this.btn_fill.Text = "Fill";
+            this.btn_fill.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_fill.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btn_pencil
             // 
-            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Image = ((System.Drawing.Image)(resources.GetObject("button5.Image")));
-            this.button5.Location = new System.Drawing.Point(622, 23);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(75, 75);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Pencil";
-            this.button5.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button5.UseVisualStyleBackColor = true;
+            this.btn_pencil.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_pencil.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_pencil.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pencil.ForeColor = System.Drawing.Color.White;
+            this.btn_pencil.Image = ((System.Drawing.Image)(resources.GetObject("btn_pencil.Image")));
+            this.btn_pencil.Location = new System.Drawing.Point(622, 23);
+            this.btn_pencil.Name = "btn_pencil";
+            this.btn_pencil.Size = new System.Drawing.Size(75, 75);
+            this.btn_pencil.TabIndex = 7;
+            this.btn_pencil.Text = "Pencil";
+            this.btn_pencil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_pencil.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btn_eraser
             // 
-            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Image = ((System.Drawing.Image)(resources.GetObject("button6.Image")));
-            this.button6.Location = new System.Drawing.Point(703, 23);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(75, 75);
-            this.button6.TabIndex = 8;
-            this.button6.Text = "Eraser";
-            this.button6.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button6.UseVisualStyleBackColor = true;
+            this.btn_eraser.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_eraser.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_eraser.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_eraser.ForeColor = System.Drawing.Color.White;
+            this.btn_eraser.Image = ((System.Drawing.Image)(resources.GetObject("btn_eraser.Image")));
+            this.btn_eraser.Location = new System.Drawing.Point(703, 23);
+            this.btn_eraser.Name = "btn_eraser";
+            this.btn_eraser.Size = new System.Drawing.Size(75, 75);
+            this.btn_eraser.TabIndex = 8;
+            this.btn_eraser.Text = "Eraser";
+            this.btn_eraser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_eraser.UseVisualStyleBackColor = true;
             // 
-            // button7
+            // btn_ellipse
             // 
-            this.button7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button7.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Image = ((System.Drawing.Image)(resources.GetObject("button7.Image")));
-            this.button7.Location = new System.Drawing.Point(784, 23);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(75, 75);
-            this.button7.TabIndex = 9;
-            this.button7.Text = "Ellipse";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button7.UseVisualStyleBackColor = true;
+            this.btn_ellipse.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_ellipse.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_ellipse.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_ellipse.ForeColor = System.Drawing.Color.White;
+            this.btn_ellipse.Image = ((System.Drawing.Image)(resources.GetObject("btn_ellipse.Image")));
+            this.btn_ellipse.Location = new System.Drawing.Point(784, 23);
+            this.btn_ellipse.Name = "btn_ellipse";
+            this.btn_ellipse.Size = new System.Drawing.Size(75, 75);
+            this.btn_ellipse.TabIndex = 9;
+            this.btn_ellipse.Text = "Ellipse";
+            this.btn_ellipse.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_ellipse.UseVisualStyleBackColor = true;
             // 
-            // button8
+            // btn_rect
             // 
-            this.button8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button8.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Image = ((System.Drawing.Image)(resources.GetObject("button8.Image")));
-            this.button8.Location = new System.Drawing.Point(866, 23);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(80, 75);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Rectangle";
-            this.button8.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button8.UseVisualStyleBackColor = true;
+            this.btn_rect.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_rect.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_rect.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_rect.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_rect.ForeColor = System.Drawing.Color.White;
+            this.btn_rect.Image = ((System.Drawing.Image)(resources.GetObject("btn_rect.Image")));
+            this.btn_rect.Location = new System.Drawing.Point(867, 24);
+            this.btn_rect.Name = "btn_rect";
+            this.btn_rect.Size = new System.Drawing.Size(87, 75);
+            this.btn_rect.TabIndex = 10;
+            this.btn_rect.Text = "Rectangle";
+            this.btn_rect.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_rect.UseVisualStyleBackColor = true;
             // 
-            // button9
+            // btn_line
             // 
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button9.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = ((System.Drawing.Image)(resources.GetObject("button9.Image")));
-            this.button9.Location = new System.Drawing.Point(952, 23);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(75, 75);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Line";
-            this.button9.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button9.UseVisualStyleBackColor = true;
+            this.btn_line.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_line.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_line.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_line.ForeColor = System.Drawing.Color.White;
+            this.btn_line.Image = ((System.Drawing.Image)(resources.GetObject("btn_line.Image")));
+            this.btn_line.Location = new System.Drawing.Point(959, 23);
+            this.btn_line.Name = "btn_line";
+            this.btn_line.Size = new System.Drawing.Size(75, 75);
+            this.btn_line.TabIndex = 11;
+            this.btn_line.Text = "Line";
+            this.btn_line.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_line.UseVisualStyleBackColor = true;
             // 
-            // button10
+            // btn_text
             // 
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
-            this.button10.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = ((System.Drawing.Image)(resources.GetObject("button10.Image")));
-            this.button10.Location = new System.Drawing.Point(1033, 23);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(75, 75);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Text";
-            this.button10.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.button10.UseVisualStyleBackColor = true;
+            this.btn_text.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
+            this.btn_text.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_text.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_text.ForeColor = System.Drawing.Color.White;
+            this.btn_text.Image = ((System.Drawing.Image)(resources.GetObject("btn_text.Image")));
+            this.btn_text.Location = new System.Drawing.Point(1040, 23);
+            this.btn_text.Name = "btn_text";
+            this.btn_text.Size = new System.Drawing.Size(75, 75);
+            this.btn_text.TabIndex = 12;
+            this.btn_text.Text = "Text";
+            this.btn_text.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_text.UseVisualStyleBackColor = true;
             // 
             // comboBox1
             // 
@@ -318,7 +319,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1361, 651);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pic);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.menuStrip1);
@@ -329,9 +330,9 @@
             this.panel1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_color)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.color_picker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,22 +343,22 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pic;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectToolStripMenuItem;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button8;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.PictureBox color_picker;
+        private System.Windows.Forms.PictureBox pic_color;
+        private System.Windows.Forms.Button btn_color;
+        private System.Windows.Forms.Button btn_line;
+        private System.Windows.Forms.Button btn_rect;
+        private System.Windows.Forms.Button btn_ellipse;
+        private System.Windows.Forms.Button btn_eraser;
+        private System.Windows.Forms.Button btn_pencil;
+        private System.Windows.Forms.Button btn_fill;
+        private System.Windows.Forms.Button btn_text;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
