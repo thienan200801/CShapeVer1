@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
+using System.IO;
+
 
 namespace Ver1
 {
@@ -33,6 +31,9 @@ namespace Ver1
         int x, y, sX, sY, cX, cY;
         ColorDialog cd = new ColorDialog();
         Color new_color;
+        SolidBrush drawBrush = new SolidBrush(Color.Black);
+        Image file;
+        Boolean opened = false;
 
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
@@ -99,7 +100,14 @@ namespace Ver1
 
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            SaveFileDialog sfd = new SaveFileDialog();
+            sfd.Filter = "Image(*.jpg)|*.jpg|(*.*|*.*";
+            if (sfd.ShowDialog() == DialogResult.OK)
+            {
+                Bitmap btm = bm.Clone(new Rectangle(0, 0, pic.Width, pic.Height), bm.PixelFormat);
+                btm.Save(sfd.FileName, ImageFormat.Jpeg);
+                MessageBox.Show("Photo saved!");
+            }
         }
 
         static Point set_point(PictureBox pb, Point pt)
@@ -173,6 +181,24 @@ namespace Ver1
             new_color = cd.Color;
             pic_color.BackColor = cd.Color;
             p.Color = cd.Color;
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult dr = openFileDialog1.ShowDialog();
+            
+            if(dr == DialogResult.OK)
+            {
+                file = Image.FromFile(openFileDialog1.FileName);
+                pic.Image = file;
+                opened = true;
+            }
+        }
+
+        private void effectToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AddEffect newEffect = new AddEffect();
+            newEffect.Show();
         }
 
         private void pic_MouseUp(object sender, MouseEventArgs e)

@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.color_picker = new System.Windows.Forms.PictureBox();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -49,15 +50,16 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newPage = new System.Windows.Forms.ToolStripMenuItem();
             this.savePage = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.effectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pic = new System.Windows.Forms.PictureBox();
-            this.color_picker = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.color_picker)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_color)).BeginInit();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.color_picker)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,8 +84,20 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1361, 122);
+            this.panel1.Size = new System.Drawing.Size(1382, 122);
             this.panel1.TabIndex = 0;
+            // 
+            // color_picker
+            // 
+            this.color_picker.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.color_picker.Image = ((System.Drawing.Image)(resources.GetObject("color_picker.Image")));
+            this.color_picker.Location = new System.Drawing.Point(13, 19);
+            this.color_picker.Name = "color_picker";
+            this.color_picker.Size = new System.Drawing.Size(337, 87);
+            this.color_picker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.color_picker.TabIndex = 15;
+            this.color_picker.TabStop = false;
+            this.color_picker.MouseClick += new System.Windows.Forms.MouseEventHandler(this.colorPicker_MouseClick);
             // 
             // richTextBox1
             // 
@@ -291,7 +305,7 @@
             this.effectToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1361, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -299,7 +313,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.newPage,
-            this.savePage});
+            this.savePage,
+            this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
@@ -307,30 +322,38 @@
             // newPage
             // 
             this.newPage.Name = "newPage";
-            this.newPage.Size = new System.Drawing.Size(123, 26);
+            this.newPage.Size = new System.Drawing.Size(128, 26);
             this.newPage.Text = "New";
             this.newPage.Click += new System.EventHandler(this.newPage_Click);
             // 
             // savePage
             // 
             this.savePage.Name = "savePage";
-            this.savePage.Size = new System.Drawing.Size(123, 26);
+            this.savePage.Size = new System.Drawing.Size(128, 26);
             this.savePage.Text = "Save";
             this.savePage.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // effectToolStripMenuItem
             // 
             this.effectToolStripMenuItem.Name = "effectToolStripMenuItem";
             this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.effectToolStripMenuItem.Text = "Effect";
+            this.effectToolStripMenuItem.Click += new System.EventHandler(this.effectToolStripMenuItem_Click);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 628);
+            this.panel2.Location = new System.Drawing.Point(0, 630);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1361, 23);
+            this.panel2.Size = new System.Drawing.Size(1382, 23);
             this.panel2.TabIndex = 2;
             // 
             // pic
@@ -338,7 +361,8 @@
             this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pic.Location = new System.Drawing.Point(0, 150);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(1361, 478);
+            this.pic.Size = new System.Drawing.Size(1382, 480);
+            this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic.TabIndex = 3;
             this.pic.TabStop = false;
             this.pic.Paint += new System.Windows.Forms.PaintEventHandler(this.pic_Paint);
@@ -347,23 +371,15 @@
             this.pic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_MouseMove);
             this.pic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pic_MouseUp);
             // 
-            // color_picker
+            // openFileDialog1
             // 
-            this.color_picker.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.color_picker.Image = ((System.Drawing.Image)(resources.GetObject("color_picker.Image")));
-            this.color_picker.Location = new System.Drawing.Point(13, 19);
-            this.color_picker.Name = "color_picker";
-            this.color_picker.Size = new System.Drawing.Size(337, 87);
-            this.color_picker.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.color_picker.TabIndex = 15;
-            this.color_picker.TabStop = false;
-            this.color_picker.MouseClick += new System.Windows.Forms.MouseEventHandler(this.colorPicker_MouseClick);
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1361, 651);
+            this.ClientSize = new System.Drawing.Size(1382, 653);
             this.Controls.Add(this.pic);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -373,11 +389,11 @@
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.color_picker)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_color)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.color_picker)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -409,6 +425,8 @@
         private System.Windows.Forms.ToolStripMenuItem newPage;
         private System.Windows.Forms.ToolStripMenuItem savePage;
         private System.Windows.Forms.PictureBox color_picker;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
