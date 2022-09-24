@@ -112,6 +112,9 @@
             this.pic.Size = new System.Drawing.Size(1361, 478);
             this.pic.TabIndex = 3;
             this.pic.TabStop = false;
+            this.pic.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_MouseDown);
+            this.pic.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_MouseMove);
+            this.pic.MouseUp += new System.Windows.Forms.MouseEventHandler(this.pic_MouseUp);
             // 
             // fileToolStripMenuItem
             // 
@@ -213,6 +216,7 @@
             this.btn_pencil.Text = "Pencil";
             this.btn_pencil.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_pencil.UseVisualStyleBackColor = true;
+            this.btn_pencil.Click += new System.EventHandler(this.btn_pencil_Click);
             // 
             // btn_eraser
             // 
@@ -228,6 +232,7 @@
             this.btn_eraser.Text = "Eraser";
             this.btn_eraser.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_eraser.UseVisualStyleBackColor = true;
+            this.btn_eraser.Click += new System.EventHandler(this.btn_eraser_Click);
             // 
             // btn_ellipse
             // 
@@ -243,6 +248,7 @@
             this.btn_ellipse.Text = "Ellipse";
             this.btn_ellipse.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_ellipse.UseVisualStyleBackColor = true;
+            this.btn_ellipse.Click += new System.EventHandler(this.btn_ellipse_Click);
             // 
             // btn_rect
             // 
@@ -259,6 +265,7 @@
             this.btn_rect.Text = "Rectangle";
             this.btn_rect.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_rect.UseVisualStyleBackColor = true;
+            this.btn_rect.Click += new System.EventHandler(this.btn_rect_Click);
             // 
             // btn_line
             // 
@@ -274,6 +281,7 @@
             this.btn_line.Text = "Line";
             this.btn_line.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_line.UseVisualStyleBackColor = true;
+            this.btn_line.Click += new System.EventHandler(this.btn_line_Click);
             // 
             // btn_text
             // 
