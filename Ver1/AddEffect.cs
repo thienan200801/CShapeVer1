@@ -77,6 +77,47 @@ namespace Ver1
             }
         }
 
+        void Hue()
+        {
+            float changered = red_trackBar.Value * 0.1f; 
+            float changegreen = green_trackBar.Value * 0.1f;
+            float changeblue = blue_trackBar.Value * 0.1f;
+
+            red_trackBar.Text = changered.ToString();
+            green_trackBar.Text = changeblue.ToString();
+            blue_trackBar.Text = changegreen.ToString();
+
+            reload();
+            if (!opened)
+            {
+                MessageBox.Show("Open please");
+            }
+            else
+            {
+                Image img = mainPic.Image;                             
+                Bitmap bmpInverted = new Bitmap(img.Width, img.Height);   
+
+                ImageAttributes ia = new ImageAttributes();                 
+                ColorMatrix cmPicture = new ColorMatrix(new float[][]      
+                {
+                    new float[]{1+changered, 0, 0, 0, 0},
+                    new float[]{0, 1+changegreen, 0, 0, 0},
+                    new float[]{0, 0, 1+changeblue, 0, 0},
+                    new float[]{0, 0, 0, 1, 0},
+                    new float[]{0, 0, 0, 0, 1}
+                });
+                ia.SetColorMatrix(cmPicture);           
+                Graphics g = Graphics.FromImage(bmpInverted);   
+
+                g.DrawImage(img, new Rectangle(0, 0, img.Width, img.Height), 0, 0, img.Width, img.Height, GraphicsUnit.Pixel, ia);
+
+
+                g.Dispose();                           
+                mainPic.Image = bmpInverted;
+            }
+        }
+
+
         private void newToolStripMenuItem_Click(object sender, EventArgs e)
         {
             g.Clear(Color.White);
@@ -114,7 +155,23 @@ namespace Ver1
 
         private void b2_Click(object sender, EventArgs e)
         {
+            reload();
             filter2();
+        }
+
+        private void red_track(object sender, EventArgs e)
+        {
+            Hue();
+        }
+
+        private void green_track(object sender, EventArgs e)
+        {
+            Hue();
+        }
+
+        private void blue_track(object sender, EventArgs e)
+        {
+            Hue();
         }
     }
 }

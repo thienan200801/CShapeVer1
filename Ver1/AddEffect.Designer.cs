@@ -43,10 +43,7 @@
             this.b11 = new System.Windows.Forms.Button();
             this.b14 = new System.Windows.Forms.Button();
             this.red_trackBar = new System.Windows.Forms.TrackBar();
-            this.red_track = new System.Windows.Forms.Label();
-            this.green_track = new System.Windows.Forms.Label();
             this.green_trackBar = new System.Windows.Forms.TrackBar();
-            this.blue_track = new System.Windows.Forms.Label();
             this.blue_trackBar = new System.Windows.Forms.TrackBar();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -55,6 +52,9 @@
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.effectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.mainPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.red_trackBar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.green_trackBar)).BeginInit();
@@ -211,26 +211,7 @@
             this.red_trackBar.Name = "red_trackBar";
             this.red_trackBar.Size = new System.Drawing.Size(893, 56);
             this.red_trackBar.TabIndex = 15;
-            // 
-            // red_track
-            // 
-            this.red_track.AutoSize = true;
-            this.red_track.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.red_track.Location = new System.Drawing.Point(12, 512);
-            this.red_track.Name = "red_track";
-            this.red_track.Size = new System.Drawing.Size(45, 20);
-            this.red_track.TabIndex = 16;
-            this.red_track.Text = "RED";
-            // 
-            // green_track
-            // 
-            this.green_track.AutoSize = true;
-            this.green_track.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.green_track.Location = new System.Drawing.Point(12, 558);
-            this.green_track.Name = "green_track";
-            this.green_track.Size = new System.Drawing.Size(68, 20);
-            this.green_track.TabIndex = 18;
-            this.green_track.Text = "GREEN";
+            this.red_trackBar.ValueChanged += new System.EventHandler(this.red_track);
             // 
             // green_trackBar
             // 
@@ -239,16 +220,7 @@
             this.green_trackBar.Name = "green_trackBar";
             this.green_trackBar.Size = new System.Drawing.Size(893, 56);
             this.green_trackBar.TabIndex = 17;
-            // 
-            // blue_track
-            // 
-            this.blue_track.AutoSize = true;
-            this.blue_track.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.blue_track.Location = new System.Drawing.Point(12, 601);
-            this.blue_track.Name = "blue_track";
-            this.blue_track.Size = new System.Drawing.Size(54, 20);
-            this.blue_track.TabIndex = 20;
-            this.blue_track.Text = "BLUE";
+            this.green_trackBar.ValueChanged += new System.EventHandler(this.green_track);
             // 
             // blue_trackBar
             // 
@@ -257,6 +229,7 @@
             this.blue_trackBar.Name = "blue_trackBar";
             this.blue_trackBar.Size = new System.Drawing.Size(893, 56);
             this.blue_trackBar.TabIndex = 19;
+            this.blue_trackBar.ValueChanged += new System.EventHandler(this.blue_track);
             // 
             // menuStrip1
             // 
@@ -266,7 +239,7 @@
             this.effectToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1062, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1062, 30);
             this.menuStrip1.TabIndex = 23;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -311,16 +284,46 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 512);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 20);
+            this.label1.TabIndex = 24;
+            this.label1.Text = "RED";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 558);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(68, 20);
+            this.label2.TabIndex = 25;
+            this.label2.Text = "GREEN";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 601);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 26;
+            this.label3.Text = "BLUE";
+            // 
             // AddEffect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1062, 653);
-            this.Controls.Add(this.blue_track);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.blue_trackBar);
-            this.Controls.Add(this.green_track);
             this.Controls.Add(this.green_trackBar);
-            this.Controls.Add(this.red_track);
             this.Controls.Add(this.red_trackBar);
             this.Controls.Add(this.b14);
             this.Controls.Add(this.b12);
@@ -368,10 +371,7 @@
         private System.Windows.Forms.Button b11;
         private System.Windows.Forms.Button b14;
         private System.Windows.Forms.TrackBar red_trackBar;
-        private System.Windows.Forms.Label red_track;
-        private System.Windows.Forms.Label green_track;
         private System.Windows.Forms.TrackBar green_trackBar;
-        private System.Windows.Forms.Label blue_track;
         private System.Windows.Forms.TrackBar blue_trackBar;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
@@ -380,5 +380,8 @@
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
