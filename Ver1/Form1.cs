@@ -174,7 +174,6 @@ namespace Ver1
             }
 
         }
-
         private void btn_color_Click_1(object sender, EventArgs e)
         {
             cd.ShowDialog();
