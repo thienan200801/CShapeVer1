@@ -35,6 +35,18 @@ namespace Ver1
         Image file;
         Boolean opened = false;
 
+        //Bitmap bm; // bm là bản vẽ
+        //Graphics g; // khai báo điểm vẽ lên bitmap
+        //bool paint = false; // biến cờ hiệu cho biết bắt đầu vẽ
+        //Point px, py; //py là tọa độ điểm bắt đầu vẽ, px là tọa độ điểm kết thúc
+        //Pen p = new Pen(Color.Black, 1); // bút vẽ 
+        //Pen eraser = new Pen(Color.White, 5); // bút xóa
+        //int index; // chọn tính năng
+        //int x, y, sX, sY, cX, cY;
+        ////cX = tọa độ X tại điểm bắt đầu, cY = tọa độ Y tại điểm bắt đầu
+        ////x = tọa độ X tại điểm sau, y = tọa độ X tại điểm sau
+        ////x = độ dài từ cuối đến đầu của x, y = độ dài từ cuối đến đầu của y
+
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
             paint = true;
