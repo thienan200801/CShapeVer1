@@ -23,24 +23,37 @@ namespace Ver1
                 p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
             else p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (FontFamily font in FontFamily.Families)
+            {
+                FontBox.Items.Add(font.Name.ToString());
+            }
+            FontBox.SelectedItem = "Arial";
+            TextSizeBox.SelectedItem = "8";
+        }
 
-        Bitmap bm;
-        Graphics g;
-        bool paint = false;
-        Point px, py;
-        Pen p;
-        Pen eraser = new Pen(Color.White, 5);
-        int index;
+        Bitmap bm; 
+        Graphics g; 
+        bool paint = false; 
+        Point px, py; 
+        Pen p = new Pen(Color.Black, 1); 
+        Pen eraser = new Pen(Color.White, 5); 
+        int index; 
         int x, y, sX, sY, cX, cY;
         ColorDialog cd = new ColorDialog();
         Color new_color;
-        SolidBrush drawBrush = new SolidBrush(Color.Black);
         Image file;
         Boolean opened = false;
 
+        int Size = 1;
+        int SizeFont = 8;
+        Font fontSelection = new Font("Arial", 1);
+        SolidBrush drawBrush = new SolidBrush(Color.Black);
+
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
-            paint = true;
+            paint = true; 
             py = e.Location;
 
             cX = e.X;
@@ -52,7 +65,7 @@ namespace Ver1
         {
             if (paint)
             {
-                if(index == 1)
+                if (index == 1) 
                 {
                     px = e.Location;
                     g.DrawLine(p, px, py);
@@ -71,8 +84,35 @@ namespace Ver1
             y = e.Y;
             sX = e.X - cX;
             sY = e.Y - cY;
-
         }
+
+        private void pic_MouseUp(object sender, MouseEventArgs e)
+        {
+            paint = false;
+
+            sX = x - cX;
+            sY = y - cY;
+
+            if (index == 3)
+            {
+                g.DrawEllipse(p, cX, cY, sX, sY);
+            }
+            if (index == 4)
+            {
+                g.DrawRectangle(p, cX, cY, sX, sY);
+            }
+            if (index == 5)
+            {
+                g.DrawLine(p, cX, cY, x, y);
+            }
+            else if (index == 8)
+            {
+                DrawText(x, y);
+                //g.DrawText(contentText.Text, fontSelection, drawBrush, cX, cY);
+            }
+        }
+
+
 
         private void pic_Paint(object sender, PaintEventArgs e)
         {
@@ -80,19 +120,24 @@ namespace Ver1
             p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
             if (paint)
             {
-                if(index == 3)
+                if (index == 3)
                 {
                     g.DrawEllipse(p, cX, cY, sX, sY);
                 }
-                else if(index == 4)
+                else if (index == 4)
                 {
                     g.DrawRectangle(p, cX, cY, sX, sY);
                 }
-                else if(index == 5)
+                else if (index == 5)
                 {
                     g.DrawLine(p, cX, cY, x, y);
                 }
+                else if (index == 8)
+                {
+                    DrawText(x, y);
+                }
             }
+
         }
 
         private void newPage_Click(object sender, EventArgs e)
@@ -127,13 +172,13 @@ namespace Ver1
             pic_color.BackColor = ((Bitmap)color_picker.Image).GetPixel(point.X, point.Y);
             new_color = pic_color.BackColor;
             p.Color = pic_color.BackColor;
-            
+
         }
 
         private void validate(Bitmap bm, Stack<Point> sp, int x, int y, Color old_color, Color new_color)
         {
             Color cx = bm.GetPixel(x, y);
-            if(cx == old_color)
+            if (cx == old_color)
             {
                 sp.Push(new Point(x, y));
                 bm.SetPixel(x, y, new_color);
@@ -148,17 +193,17 @@ namespace Ver1
             bm.SetPixel(x, y, new_clr);
             if (old_color == new_clr) return;
 
-            while(pixel.Count > 0)
+            while (pixel.Count > 0)
             {
-                Point pt = (Point)pixel.Pop();  
-                if(pt.X > 0 && pt.Y > 0 
-                    && pt.X < bm.Width-1
+                Point pt = (Point)pixel.Pop();
+                if (pt.X > 0 && pt.Y > 0
+                    && pt.X < bm.Width - 1
                     && pt.Y < bm.Height - 1)
                 {
                     validate(bm, pixel, pt.X - 1, pt.Y, old_color, new_clr);
-                    validate(bm, pixel, pt.X, pt.Y-1, old_color, new_clr);
-                    validate(bm, pixel, pt.X+1, pt.Y, old_color, new_clr);
-                    validate(bm, pixel, pt.X, pt.Y+1, old_color, new_clr);
+                    validate(bm, pixel, pt.X, pt.Y - 1, old_color, new_clr);
+                    validate(bm, pixel, pt.X + 1, pt.Y, old_color, new_clr);
+                    validate(bm, pixel, pt.X, pt.Y + 1, old_color, new_clr);
 
                 }
             }
@@ -186,13 +231,23 @@ namespace Ver1
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult dr = openFileDialog1.ShowDialog();
-            
-            if(dr == DialogResult.OK)
+
+            if (dr == DialogResult.OK)
             {
                 file = Image.FromFile(openFileDialog1.FileName);
                 pic.Image = file;
                 opened = true;
             }
+        }
+
+        private void DrawText(int x, int y)
+        {
+            Font myFont = new System.Drawing.Font(FontBox.SelectedItem.ToString(), 40, FontStyle.Italic);
+
+            Brush myBrush = new SolidBrush(System.Drawing.Color.Red);
+            string str = txt.Text;
+
+            g.DrawString(str, myFont, myBrush, x, y);
         }
 
         private void effectToolStripMenuItem_Click(object sender, EventArgs e)
@@ -206,26 +261,17 @@ namespace Ver1
             Application.Exit();
         }
 
-        private void pic_MouseUp(object sender, MouseEventArgs e)
+        private void btn_text_Click_1(object sender, EventArgs e)
         {
-            paint = false;
-
-            sX = x - cX;
-            sY = y - cY;
-
-            if(index == 3)
-            {
-                g.DrawEllipse(p, cX, cY, sX, sY);
-            }
-            if(index == 4)
-            {
-                g.DrawRectangle(p, cX, cY, sX, sY);
-            }
-            if(index == 5)
-            {
-                g.DrawLine(p, cX, cY, x, y);
-            }
+            index = 8;
         }
+
+        private void TextSizeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Size = Int32.Parse(TextSizeBox.Text);
+            p.Width = Size;
+        }
+
 
         private void btn_pencil_Click(object sender, EventArgs e)
         {
@@ -248,12 +294,12 @@ namespace Ver1
         {
             index = 5;
         }
+
         private void btn_fill_Click(object sender, EventArgs e)
         {
             index = 7;
         }
 
 
-        
     }
 }

@@ -31,9 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.panel1 = new System.Windows.Forms.Panel();
             this.color_picker = new System.Windows.Forms.PictureBox();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txt = new System.Windows.Forms.RichTextBox();
+            this.TextSizeBox = new System.Windows.Forms.ComboBox();
+            this.FontBox = new System.Windows.Forms.ComboBox();
             this.btn_text = new System.Windows.Forms.Button();
             this.btn_line = new System.Windows.Forms.Button();
             this.btn_rect = new System.Windows.Forms.Button();
@@ -67,9 +67,9 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DimGray;
             this.panel1.Controls.Add(this.color_picker);
-            this.panel1.Controls.Add(this.richTextBox1);
-            this.panel1.Controls.Add(this.comboBox2);
-            this.panel1.Controls.Add(this.comboBox1);
+            this.panel1.Controls.Add(this.txt);
+            this.panel1.Controls.Add(this.TextSizeBox);
+            this.panel1.Controls.Add(this.FontBox);
             this.panel1.Controls.Add(this.btn_text);
             this.panel1.Controls.Add(this.btn_line);
             this.panel1.Controls.Add(this.btn_rect);
@@ -100,29 +100,30 @@
             this.color_picker.TabStop = false;
             this.color_picker.MouseClick += new System.Windows.Forms.MouseEventHandler(this.colorPicker_MouseClick);
             // 
-            // richTextBox1
+            // txt
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(1129, 49);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(217, 56);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
+            this.txt.Location = new System.Drawing.Point(1129, 49);
+            this.txt.Name = "txt";
+            this.txt.Size = new System.Drawing.Size(217, 56);
+            this.txt.TabIndex = 4;
+            this.txt.Text = "";
             // 
-            // comboBox2
+            // TextSizeBox
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(1300, 19);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(46, 24);
-            this.comboBox2.TabIndex = 14;
+            this.TextSizeBox.FormattingEnabled = true;
+            this.TextSizeBox.Location = new System.Drawing.Point(1300, 19);
+            this.TextSizeBox.Name = "TextSizeBox";
+            this.TextSizeBox.Size = new System.Drawing.Size(46, 24);
+            this.TextSizeBox.TabIndex = 14;
+            this.TextSizeBox.SelectedIndexChanged += new System.EventHandler(this.TextSizeBox_SelectedIndexChanged);
             // 
-            // comboBox1
+            // FontBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(1129, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(156, 24);
-            this.comboBox1.TabIndex = 13;
+            this.FontBox.FormattingEnabled = true;
+            this.FontBox.Location = new System.Drawing.Point(1129, 19);
+            this.FontBox.Name = "FontBox";
+            this.FontBox.Size = new System.Drawing.Size(156, 24);
+            this.FontBox.TabIndex = 13;
             // 
             // btn_text
             // 
@@ -139,6 +140,7 @@
             this.btn_text.Text = "Text";
             this.btn_text.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_text.UseVisualStyleBackColor = true;
+            this.btn_text.Click += new System.EventHandler(this.btn_text_Click_1);
             // 
             // btn_line
             // 
@@ -353,7 +355,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -397,6 +399,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.color_picker)).EndInit();
@@ -429,9 +432,9 @@
         private System.Windows.Forms.Button btn_pencil;
         private System.Windows.Forms.Button btn_fill;
         private System.Windows.Forms.Button btn_text;
-        private System.Windows.Forms.RichTextBox richTextBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.RichTextBox txt;
+        private System.Windows.Forms.ComboBox TextSizeBox;
+        private System.Windows.Forms.ComboBox FontBox;
         private System.Windows.Forms.ToolStripMenuItem newPage;
         private System.Windows.Forms.ToolStripMenuItem savePage;
         private System.Windows.Forms.PictureBox color_picker;
