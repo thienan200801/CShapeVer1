@@ -19,13 +19,16 @@ namespace Ver1
             g = Graphics.FromImage(bm);
             g.Clear(Color.White);
             pic.Image = bm;
+            if(Convert.ToInt32(lineSize.Text) < 1)
+                p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
+            else p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
         }
 
         Bitmap bm;
         Graphics g;
         bool paint = false;
         Point px, py;
-        Pen p = new Pen(Color.Black, 1);
+        Pen p;
         Pen eraser = new Pen(Color.White, 5);
         int index;
         int x, y, sX, sY, cX, cY;
@@ -74,6 +77,7 @@ namespace Ver1
         private void pic_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
             if (paint)
             {
                 if(index == 3)
@@ -160,10 +164,6 @@ namespace Ver1
             }
         }
 
-        private void btn_fill_Click(object sender, EventArgs e)
-        {
-            index = 7;
-        }
 
         private void pic_Click(object sender, MouseEventArgs e)
         {
@@ -231,7 +231,7 @@ namespace Ver1
         {
             index = 1;
         }
-
+         
         private void btn_eraser_Click(object sender, EventArgs e)
         {
             index = 2;
@@ -247,6 +247,10 @@ namespace Ver1
         private void btn_line_Click(object sender, EventArgs e)
         {
             index = 5;
+        }
+        private void btn_fill_Click(object sender, EventArgs e)
+        {
+            index = 7;
         }
 
 
