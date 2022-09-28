@@ -20,6 +20,15 @@ namespace Ver1
             g.Clear(Color.White);
             pic.Image = bm;
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            foreach (FontFamily font in FontFamily.Families)
+            {
+                FontBox.Items.Add(font.Name.ToString());
+            }
+            FontBox.SelectedItem = "Arial";
+            TextSizeBox.SelectedItem = "8";
+        }
 
         Bitmap bm; 
         Graphics g; 
@@ -31,9 +40,13 @@ namespace Ver1
         int x, y, sX, sY, cX, cY;
         ColorDialog cd = new ColorDialog();
         Color new_color;
-        SolidBrush drawBrush = new SolidBrush(Color.Black);
         Image file;
         Boolean opened = false;
+
+        int Size = 1;
+        int SizeFont = 8;
+        Font fontSelection = new Font("Arial", 1);
+        SolidBrush drawBrush = new SolidBrush(Color.Black);
 
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
@@ -92,6 +105,7 @@ namespace Ver1
             else if (index == 8)
             {
                 DrawText(x, y);
+                //g.DrawText(contentText.Text, fontSelection, drawBrush, cX, cY);
             }
         }
 
@@ -224,7 +238,7 @@ namespace Ver1
 
         private void DrawText(int x, int y)
         {
-            Font myFont = new System.Drawing.Font("Helvetica", 40, FontStyle.Italic);
+            Font myFont = new System.Drawing.Font(FontBox.SelectedItem.ToString(), 40, FontStyle.Italic);
 
             Brush myBrush = new SolidBrush(System.Drawing.Color.Red);
             string str = txt.Text;
@@ -247,6 +261,13 @@ namespace Ver1
         {
             index = 8;
         }
+
+        private void TextSizeBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Size = Int32.Parse(TextSizeBox.Text);
+            p.Width = Size;
+        }
+
 
         private void btn_pencil_Click(object sender, EventArgs e)
         {

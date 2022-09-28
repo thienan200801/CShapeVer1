@@ -115,6 +115,7 @@
             this.TextSizeBox.Name = "TextSizeBox";
             this.TextSizeBox.Size = new System.Drawing.Size(46, 24);
             this.TextSizeBox.TabIndex = 14;
+            this.TextSizeBox.SelectedIndexChanged += new System.EventHandler(this.TextSizeBox_SelectedIndexChanged);
             // 
             // FontBox
             // 
@@ -397,6 +398,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.color_picker)).EndInit();
