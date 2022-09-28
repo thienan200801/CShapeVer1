@@ -139,6 +139,7 @@
             this.btn_text.Text = "Text";
             this.btn_text.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_text.UseVisualStyleBackColor = true;
+            this.btn_text.Click += new System.EventHandler(this.btn_text_Click_1);
             // 
             // btn_line
             // 

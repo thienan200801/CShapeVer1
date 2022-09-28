@@ -246,7 +246,7 @@ namespace Ver1
             Application.Exit();
         }
 
-        private void btn_text_Click(object sender, EventArgs e)
+        private void btn_text_Click_1(object sender, EventArgs e)
         {
             index = 8;
         }
