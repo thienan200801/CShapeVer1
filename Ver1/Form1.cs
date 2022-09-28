@@ -21,26 +21,23 @@ namespace Ver1
             pic.Image = bm;
         }
 
-        Bitmap bm; // bm là bản vẽ
-        Graphics g; // khai báo điểm vẽ lên bitmap
-        bool paint = false; // biến cờ hiệu cho biết bắt đầu vẽ
-        Point px, py; //py là tọa độ điểm bắt đầu vẽ, px là tọa độ điểm kết thúc
-        Pen p = new Pen(Color.Black, 1); // bút vẽ 
-        Pen eraser = new Pen(Color.White, 5); // bút xóa
-        int index; // chọn tính năng
+        Bitmap bm; 
+        Graphics g; 
+        bool paint = false; 
+        Point px, py; 
+        Pen p = new Pen(Color.Black, 1); 
+        Pen eraser = new Pen(Color.White, 5); 
+        int index; 
         int x, y, sX, sY, cX, cY;
-        //cX = tọa độ X tại điểm bắt đầu, cY = tọa độ Y tại điểm bắt đầu
-        //x = tọa độ X tại điểm sau, y = tọa độ X tại điểm sau
-        //x = độ dài từ cuối đến đầu của x, y = độ dài từ cuối đến đầu của y
         ColorDialog cd = new ColorDialog();
         Color new_color;
         SolidBrush drawBrush = new SolidBrush(Color.Black);
-        Image file; // chưa img load lên từ máy
+        Image file;
         Boolean opened = false;
 
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
-            paint = true; // nhấn chuột xuống --> bắt đầu vẽ --> set paint cờ hiệu true
+            paint = true; 
             py = e.Location;
 
             cX = e.X;
@@ -52,7 +49,7 @@ namespace Ver1
         {
             if (paint)
             {
-                if (index == 1) //pencil
+                if (index == 1) 
                 {
                     px = e.Location;
                     g.DrawLine(p, px, py);
