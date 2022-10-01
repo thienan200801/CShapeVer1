@@ -42,9 +42,9 @@
             this.btn_pencil = new System.Windows.Forms.Button();
             this.btn_fill = new System.Windows.Forms.Button();
             this.btn_color = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.lineSize = new System.Windows.Forms.TextBox();
+            this.inc = new System.Windows.Forms.Button();
+            this.dec = new System.Windows.Forms.Button();
             this.pic_color = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -78,12 +78,12 @@
             this.panel1.Controls.Add(this.btn_pencil);
             this.panel1.Controls.Add(this.btn_fill);
             this.panel1.Controls.Add(this.btn_color);
-            this.panel1.Controls.Add(this.textBox1);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.lineSize);
+            this.panel1.Controls.Add(this.inc);
+            this.panel1.Controls.Add(this.dec);
             this.panel1.Controls.Add(this.pic_color);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1382, 122);
             this.panel1.TabIndex = 0;
@@ -115,6 +115,7 @@
             this.TextSizeBox.Name = "TextSizeBox";
             this.TextSizeBox.Size = new System.Drawing.Size(46, 24);
             this.TextSizeBox.TabIndex = 14;
+            this.TextSizeBox.SelectedIndexChanged += new System.EventHandler(this.TextSizeBox_SelectedIndexChanged);
             // 
             // FontBox
             // 
@@ -261,39 +262,40 @@
             this.btn_color.UseVisualStyleBackColor = true;
             this.btn_color.Click += new System.EventHandler(this.btn_color_Click_1);
             // 
-            // textBox1
+            // lineSize
             // 
-            this.textBox1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.textBox1.Location = new System.Drawing.Point(378, 83);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(36, 22);
-            this.textBox1.TabIndex = 4;
+            this.lineSize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lineSize.Location = new System.Drawing.Point(379, 83);
+            this.lineSize.Name = "lineSize";
+            this.lineSize.Size = new System.Drawing.Size(36, 22);
+            this.lineSize.TabIndex = 4;
+            this.lineSize.Text = "1";
             // 
-            // button2
+            // inc
             // 
-            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button2.Location = new System.Drawing.Point(419, 83);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(19, 23);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "-";
-            this.button2.UseVisualStyleBackColor = true;
+            this.inc.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.inc.Location = new System.Drawing.Point(419, 83);
+            this.inc.Name = "inc";
+            this.inc.Size = new System.Drawing.Size(19, 23);
+            this.inc.TabIndex = 3;
+            this.inc.Text = "+";
+            this.inc.UseVisualStyleBackColor = true;
             // 
-            // button1
+            // dec
             // 
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Location = new System.Drawing.Point(356, 83);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(19, 23);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "-";
-            this.button1.UseVisualStyleBackColor = true;
+            this.dec.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.dec.Location = new System.Drawing.Point(356, 83);
+            this.dec.Name = "dec";
+            this.dec.Size = new System.Drawing.Size(19, 23);
+            this.dec.TabIndex = 2;
+            this.dec.Text = "-";
+            this.dec.UseVisualStyleBackColor = true;
             // 
             // pic_color
             // 
             this.pic_color.BackColor = System.Drawing.Color.White;
             this.pic_color.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_color.Location = new System.Drawing.Point(375, 19);
+            this.pic_color.Location = new System.Drawing.Point(373, 19);
             this.pic_color.Name = "pic_color";
             this.pic_color.Size = new System.Drawing.Size(50, 50);
             this.pic_color.TabIndex = 0;
@@ -308,7 +310,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1382, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -319,7 +321,7 @@
             this.savePage,
             this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newPage
@@ -346,7 +348,7 @@
             // effectToolStripMenuItem
             // 
             this.effectToolStripMenuItem.Name = "effectToolStripMenuItem";
-            this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
             this.effectToolStripMenuItem.Text = "Effect";
             this.effectToolStripMenuItem.Click += new System.EventHandler(this.effectToolStripMenuItem_Click);
             // 
@@ -369,9 +371,9 @@
             // pic
             // 
             this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic.Location = new System.Drawing.Point(0, 150);
+            this.pic.Location = new System.Drawing.Point(0, 152);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(1382, 480);
+            this.pic.Size = new System.Drawing.Size(1382, 478);
             this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic.TabIndex = 3;
             this.pic.TabStop = false;
@@ -397,6 +399,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.color_picker)).EndInit();
@@ -417,9 +420,9 @@
         private System.Windows.Forms.PictureBox pic;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem effectToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox lineSize;
+        private System.Windows.Forms.Button inc;
+        private System.Windows.Forms.Button dec;
         private System.Windows.Forms.PictureBox pic_color;
         private System.Windows.Forms.Button btn_color;
         private System.Windows.Forms.Button btn_line;
