@@ -280,6 +280,13 @@ namespace Ver1
             lineSize.Text = (temp+1).ToString();
         }
 
+        private void dec_Click(object sender, EventArgs e)
+        {
+            int temp = int.Parse(lineSize.Text);
+                if(temp > 1) lineSize.Text = (temp - 1).ToString();
+                else MessageBox.Show("Cannot decrease when size equal to 1");            
+        }
+
         private void btn_eraser_Click(object sender, EventArgs e)
         {
             index = 2;
