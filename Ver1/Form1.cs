@@ -261,10 +261,6 @@ namespace Ver1
             Application.Exit();
         }
 
-        private void btn_text_Click_1(object sender, EventArgs e)
-        {
-            index = 8;
-        }
 
         private void TextSizeBox_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -277,7 +273,13 @@ namespace Ver1
         {
             index = 1;
         }
-         
+
+        private void inc_Click(object sender, EventArgs e)
+        {
+            int temp = int.Parse(lineSize.Text);
+            lineSize.Text = (temp+1).ToString();
+        }
+
         private void btn_eraser_Click(object sender, EventArgs e)
         {
             index = 2;
@@ -298,6 +300,10 @@ namespace Ver1
         private void btn_fill_Click(object sender, EventArgs e)
         {
             index = 7;
+        }
+        private void btn_text_Click_1(object sender, EventArgs e)
+        {
+            index = 8;
         }
 
 
