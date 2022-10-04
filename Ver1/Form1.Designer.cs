@@ -291,6 +291,7 @@
             this.dec.TabIndex = 2;
             this.dec.Text = "-";
             this.dec.UseVisualStyleBackColor = true;
+            this.dec.Click += new System.EventHandler(this.dec_Click);
             // 
             // pic_color
             // 
