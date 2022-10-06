@@ -42,7 +42,7 @@ namespace Ver1
         int index; 
         int x, y, sX, sY, cX, cY;
         ColorDialog cd = new ColorDialog();
-        Color new_color;
+        Color new_color = Color.Black;
         Image file;
         Boolean opened = false;
 
@@ -108,7 +108,6 @@ namespace Ver1
             else if (index == 8)
             {
                 DrawText(x, y);
-                //g.DrawText(contentText.Text, fontSelection, drawBrush, cX, cY);
             }
         }
 
@@ -117,7 +116,7 @@ namespace Ver1
         private void pic_Paint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
-            p = new Pen(Color.Black, Convert.ToInt32(lineSize.Text));
+            p = new Pen(new_color, Convert.ToInt32(lineSize.Text));
             if (paint)
             {
                 if (index == 3)
@@ -244,7 +243,7 @@ namespace Ver1
         {
             Font myFont = new System.Drawing.Font(FontBox.SelectedItem.ToString(), 40, FontStyle.Italic);
 
-            Brush myBrush = new SolidBrush(System.Drawing.Color.Red);
+            Brush myBrush = new SolidBrush(new_color);
             string str = txt.Text;
 
             g.DrawString(str, myFont, myBrush, x, y);
