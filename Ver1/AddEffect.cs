@@ -346,5 +346,10 @@ namespace Ver1
         {
             this.Close();
         }
+
+        private void red_trackBar_Scroll(object sender, EventArgs e)
+        {
+
+        }
     }
 }

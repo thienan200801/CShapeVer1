@@ -30,18 +30,18 @@
         {
             this.mainPic = new System.Windows.Forms.PictureBox();
             this.b1 = new System.Windows.Forms.Button();
-            this.b2 = new System.Windows.Forms.Button();
-            this.b4 = new System.Windows.Forms.Button();
-            this.b3 = new System.Windows.Forms.Button();
-            this.b6 = new System.Windows.Forms.Button();
-            this.b5 = new System.Windows.Forms.Button();
-            this.b8 = new System.Windows.Forms.Button();
-            this.b7 = new System.Windows.Forms.Button();
-            this.b10 = new System.Windows.Forms.Button();
-            this.b9 = new System.Windows.Forms.Button();
-            this.b12 = new System.Windows.Forms.Button();
-            this.b11 = new System.Windows.Forms.Button();
-            this.b14 = new System.Windows.Forms.Button();
+            this.Sepia = new System.Windows.Forms.Button();
+            this.Gray = new System.Windows.Forms.Button();
+            this.Artistic = new System.Windows.Forms.Button();
+            this.Flash = new System.Windows.Forms.Button();
+            this.Spike = new System.Windows.Forms.Button();
+            this.Winter = new System.Windows.Forms.Button();
+            this.Frozen = new System.Windows.Forms.Button();
+            this.Bleach = new System.Windows.Forms.Button();
+            this.Dramatic = new System.Windows.Forms.Button();
+            this.Hedge = new System.Windows.Forms.Button();
+            this.Vivid = new System.Windows.Forms.Button();
+            this.Silvertone = new System.Windows.Forms.Button();
             this.red_trackBar = new System.Windows.Forms.TrackBar();
             this.green_trackBar = new System.Windows.Forms.TrackBar();
             this.blue_trackBar = new System.Windows.Forms.TrackBar();
@@ -84,137 +84,137 @@
             this.b1.UseVisualStyleBackColor = true;
             this.b1.Click += new System.EventHandler(this.b1_Click);
             // 
-            // b2
+            // Sepia
             // 
-            this.b2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b2.Location = new System.Drawing.Point(952, 120);
-            this.b2.Name = "b2";
-            this.b2.Size = new System.Drawing.Size(75, 23);
-            this.b2.TabIndex = 2;
-            this.b2.Text = "Sepia";
-            this.b2.UseVisualStyleBackColor = true;
-            this.b2.Click += new System.EventHandler(this.b2_Click);
+            this.Sepia.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Sepia.Location = new System.Drawing.Point(952, 120);
+            this.Sepia.Name = "Sepia";
+            this.Sepia.Size = new System.Drawing.Size(75, 23);
+            this.Sepia.TabIndex = 2;
+            this.Sepia.Text = "Sepia";
+            this.Sepia.UseVisualStyleBackColor = true;
+            this.Sepia.Click += new System.EventHandler(this.b2_Click);
             // 
-            // b4
+            // Gray
             // 
-            this.b4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b4.Location = new System.Drawing.Point(952, 178);
-            this.b4.Name = "b4";
-            this.b4.Size = new System.Drawing.Size(75, 23);
-            this.b4.TabIndex = 4;
-            this.b4.Text = "Gray";
-            this.b4.UseVisualStyleBackColor = true;
-            this.b4.Click += new System.EventHandler(this.b4_Click);
+            this.Gray.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Gray.Location = new System.Drawing.Point(952, 178);
+            this.Gray.Name = "Gray";
+            this.Gray.Size = new System.Drawing.Size(75, 23);
+            this.Gray.TabIndex = 4;
+            this.Gray.Text = "Gray";
+            this.Gray.UseVisualStyleBackColor = true;
+            this.Gray.Click += new System.EventHandler(this.b4_Click);
             // 
-            // b3
+            // Artistic
             // 
-            this.b3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b3.Location = new System.Drawing.Point(952, 149);
-            this.b3.Name = "b3";
-            this.b3.Size = new System.Drawing.Size(75, 23);
-            this.b3.TabIndex = 3;
-            this.b3.Text = "Artistic";
-            this.b3.UseVisualStyleBackColor = true;
-            this.b3.Click += new System.EventHandler(this.b3_Click);
+            this.Artistic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Artistic.Location = new System.Drawing.Point(952, 149);
+            this.Artistic.Name = "Artistic";
+            this.Artistic.Size = new System.Drawing.Size(75, 23);
+            this.Artistic.TabIndex = 3;
+            this.Artistic.Text = "Artistic";
+            this.Artistic.UseVisualStyleBackColor = true;
+            this.Artistic.Click += new System.EventHandler(this.b3_Click);
             // 
-            // b6
+            // Flash
             // 
-            this.b6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b6.Location = new System.Drawing.Point(952, 236);
-            this.b6.Name = "b6";
-            this.b6.Size = new System.Drawing.Size(75, 23);
-            this.b6.TabIndex = 6;
-            this.b6.Text = "Flash";
-            this.b6.UseVisualStyleBackColor = true;
-            this.b6.Click += new System.EventHandler(this.b6_Click);
+            this.Flash.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Flash.Location = new System.Drawing.Point(952, 236);
+            this.Flash.Name = "Flash";
+            this.Flash.Size = new System.Drawing.Size(75, 23);
+            this.Flash.TabIndex = 6;
+            this.Flash.Text = "Flash";
+            this.Flash.UseVisualStyleBackColor = true;
+            this.Flash.Click += new System.EventHandler(this.b6_Click);
             // 
-            // b5
+            // Spike
             // 
-            this.b5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b5.Location = new System.Drawing.Point(952, 207);
-            this.b5.Name = "b5";
-            this.b5.Size = new System.Drawing.Size(75, 23);
-            this.b5.TabIndex = 5;
-            this.b5.Text = "Spike";
-            this.b5.UseVisualStyleBackColor = true;
-            this.b5.Click += new System.EventHandler(this.b5_Click);
+            this.Spike.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Spike.Location = new System.Drawing.Point(952, 207);
+            this.Spike.Name = "Spike";
+            this.Spike.Size = new System.Drawing.Size(75, 23);
+            this.Spike.TabIndex = 5;
+            this.Spike.Text = "Spike";
+            this.Spike.UseVisualStyleBackColor = true;
+            this.Spike.Click += new System.EventHandler(this.b5_Click);
             // 
-            // b8
+            // Winter
             // 
-            this.b8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b8.Location = new System.Drawing.Point(952, 293);
-            this.b8.Name = "b8";
-            this.b8.Size = new System.Drawing.Size(75, 23);
-            this.b8.TabIndex = 8;
-            this.b8.Text = "Winter";
-            this.b8.UseVisualStyleBackColor = true;
-            this.b8.Click += new System.EventHandler(this.b8_Click);
+            this.Winter.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Winter.Location = new System.Drawing.Point(952, 293);
+            this.Winter.Name = "Winter";
+            this.Winter.Size = new System.Drawing.Size(75, 23);
+            this.Winter.TabIndex = 8;
+            this.Winter.Text = "Winter";
+            this.Winter.UseVisualStyleBackColor = true;
+            this.Winter.Click += new System.EventHandler(this.b8_Click);
             // 
-            // b7
+            // Frozen
             // 
-            this.b7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b7.Location = new System.Drawing.Point(952, 264);
-            this.b7.Name = "b7";
-            this.b7.Size = new System.Drawing.Size(75, 23);
-            this.b7.TabIndex = 7;
-            this.b7.Text = "Frozen";
-            this.b7.UseVisualStyleBackColor = true;
-            this.b7.Click += new System.EventHandler(this.b7_Click);
+            this.Frozen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Frozen.Location = new System.Drawing.Point(952, 264);
+            this.Frozen.Name = "Frozen";
+            this.Frozen.Size = new System.Drawing.Size(75, 23);
+            this.Frozen.TabIndex = 7;
+            this.Frozen.Text = "Frozen";
+            this.Frozen.UseVisualStyleBackColor = true;
+            this.Frozen.Click += new System.EventHandler(this.b7_Click);
             // 
-            // b10
+            // Bleach
             // 
-            this.b10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b10.Location = new System.Drawing.Point(952, 348);
-            this.b10.Name = "b10";
-            this.b10.Size = new System.Drawing.Size(75, 23);
-            this.b10.TabIndex = 10;
-            this.b10.Text = "Bleach";
-            this.b10.UseVisualStyleBackColor = true;
-            this.b10.Click += new System.EventHandler(this.b10_Click);
+            this.Bleach.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Bleach.Location = new System.Drawing.Point(952, 348);
+            this.Bleach.Name = "Bleach";
+            this.Bleach.Size = new System.Drawing.Size(75, 23);
+            this.Bleach.TabIndex = 10;
+            this.Bleach.Text = "Bleach";
+            this.Bleach.UseVisualStyleBackColor = true;
+            this.Bleach.Click += new System.EventHandler(this.b10_Click);
             // 
-            // b9
+            // Dramatic
             // 
-            this.b9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b9.Location = new System.Drawing.Point(952, 319);
-            this.b9.Name = "b9";
-            this.b9.Size = new System.Drawing.Size(75, 23);
-            this.b9.TabIndex = 9;
-            this.b9.Text = "Dramatic";
-            this.b9.UseVisualStyleBackColor = true;
-            this.b9.Click += new System.EventHandler(this.b9_Click);
+            this.Dramatic.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Dramatic.Location = new System.Drawing.Point(952, 319);
+            this.Dramatic.Name = "Dramatic";
+            this.Dramatic.Size = new System.Drawing.Size(75, 23);
+            this.Dramatic.TabIndex = 9;
+            this.Dramatic.Text = "Dramatic";
+            this.Dramatic.UseVisualStyleBackColor = true;
+            this.Dramatic.Click += new System.EventHandler(this.b9_Click);
             // 
-            // b12
+            // Hedge
             // 
-            this.b12.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b12.Location = new System.Drawing.Point(952, 406);
-            this.b12.Name = "b12";
-            this.b12.Size = new System.Drawing.Size(75, 23);
-            this.b12.TabIndex = 12;
-            this.b12.Text = "Hedge";
-            this.b12.UseVisualStyleBackColor = true;
-            this.b12.Click += new System.EventHandler(this.b12_Click);
+            this.Hedge.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Hedge.Location = new System.Drawing.Point(952, 406);
+            this.Hedge.Name = "Hedge";
+            this.Hedge.Size = new System.Drawing.Size(75, 23);
+            this.Hedge.TabIndex = 12;
+            this.Hedge.Text = "Hedge";
+            this.Hedge.UseVisualStyleBackColor = true;
+            this.Hedge.Click += new System.EventHandler(this.b12_Click);
             // 
-            // b11
+            // Vivid
             // 
-            this.b11.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b11.Location = new System.Drawing.Point(952, 377);
-            this.b11.Name = "b11";
-            this.b11.Size = new System.Drawing.Size(75, 23);
-            this.b11.TabIndex = 11;
-            this.b11.Text = "Vivid";
-            this.b11.UseVisualStyleBackColor = true;
-            this.b11.Click += new System.EventHandler(this.b11_Click);
+            this.Vivid.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Vivid.Location = new System.Drawing.Point(952, 377);
+            this.Vivid.Name = "Vivid";
+            this.Vivid.Size = new System.Drawing.Size(75, 23);
+            this.Vivid.TabIndex = 11;
+            this.Vivid.Text = "Vivid";
+            this.Vivid.UseVisualStyleBackColor = true;
+            this.Vivid.Click += new System.EventHandler(this.b11_Click);
             // 
-            // b14
+            // Silvertone
             // 
-            this.b14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.b14.Location = new System.Drawing.Point(952, 435);
-            this.b14.Name = "b14";
-            this.b14.Size = new System.Drawing.Size(75, 23);
-            this.b14.TabIndex = 14;
-            this.b14.Text = "Silvertone";
-            this.b14.UseVisualStyleBackColor = true;
-            this.b14.Click += new System.EventHandler(this.b14_Click);
+            this.Silvertone.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Silvertone.Location = new System.Drawing.Point(952, 435);
+            this.Silvertone.Name = "Silvertone";
+            this.Silvertone.Size = new System.Drawing.Size(75, 23);
+            this.Silvertone.TabIndex = 14;
+            this.Silvertone.Text = "Silvertone";
+            this.Silvertone.UseVisualStyleBackColor = true;
+            this.Silvertone.Click += new System.EventHandler(this.b14_Click);
             // 
             // red_trackBar
             // 
@@ -223,6 +223,7 @@
             this.red_trackBar.Name = "red_trackBar";
             this.red_trackBar.Size = new System.Drawing.Size(893, 56);
             this.red_trackBar.TabIndex = 15;
+            this.red_trackBar.Scroll += new System.EventHandler(this.red_trackBar_Scroll);
             this.red_trackBar.ValueChanged += new System.EventHandler(this.red_track);
             // 
             // green_trackBar
@@ -348,18 +349,18 @@
             this.Controls.Add(this.blue_trackBar);
             this.Controls.Add(this.green_trackBar);
             this.Controls.Add(this.red_trackBar);
-            this.Controls.Add(this.b14);
-            this.Controls.Add(this.b12);
-            this.Controls.Add(this.b11);
-            this.Controls.Add(this.b10);
-            this.Controls.Add(this.b9);
-            this.Controls.Add(this.b8);
-            this.Controls.Add(this.b7);
-            this.Controls.Add(this.b6);
-            this.Controls.Add(this.b5);
-            this.Controls.Add(this.b4);
-            this.Controls.Add(this.b3);
-            this.Controls.Add(this.b2);
+            this.Controls.Add(this.Silvertone);
+            this.Controls.Add(this.Hedge);
+            this.Controls.Add(this.Vivid);
+            this.Controls.Add(this.Bleach);
+            this.Controls.Add(this.Dramatic);
+            this.Controls.Add(this.Winter);
+            this.Controls.Add(this.Frozen);
+            this.Controls.Add(this.Flash);
+            this.Controls.Add(this.Spike);
+            this.Controls.Add(this.Gray);
+            this.Controls.Add(this.Artistic);
+            this.Controls.Add(this.Sepia);
             this.Controls.Add(this.b1);
             this.Controls.Add(this.mainPic);
             this.Controls.Add(this.menuStrip1);
@@ -381,18 +382,18 @@
 
         private System.Windows.Forms.PictureBox mainPic;
         private System.Windows.Forms.Button b1;
-        private System.Windows.Forms.Button b2;
-        private System.Windows.Forms.Button b4;
-        private System.Windows.Forms.Button b3;
-        private System.Windows.Forms.Button b6;
-        private System.Windows.Forms.Button b5;
-        private System.Windows.Forms.Button b8;
-        private System.Windows.Forms.Button b7;
-        private System.Windows.Forms.Button b10;
-        private System.Windows.Forms.Button b9;
-        private System.Windows.Forms.Button b12;
-        private System.Windows.Forms.Button b11;
-        private System.Windows.Forms.Button b14;
+        private System.Windows.Forms.Button Sepia;
+        private System.Windows.Forms.Button Gray;
+        private System.Windows.Forms.Button Artistic;
+        private System.Windows.Forms.Button Flash;
+        private System.Windows.Forms.Button Spike;
+        private System.Windows.Forms.Button Winter;
+        private System.Windows.Forms.Button Frozen;
+        private System.Windows.Forms.Button Bleach;
+        private System.Windows.Forms.Button Dramatic;
+        private System.Windows.Forms.Button Hedge;
+        private System.Windows.Forms.Button Vivid;
+        private System.Windows.Forms.Button Silvertone;
         private System.Windows.Forms.TrackBar red_trackBar;
         private System.Windows.Forms.TrackBar green_trackBar;
         private System.Windows.Forms.TrackBar blue_trackBar;
