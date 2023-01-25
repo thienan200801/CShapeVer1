@@ -229,13 +229,23 @@ namespace Ver1
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            DialogResult dr = openFileDialog1.ShowDialog();
+            OpenFileDialog dr = new OpenFileDialog();
+            dr.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
 
-            if (dr == DialogResult.OK)
+            if (dr.ShowDialog() == DialogResult.OK)
             {
-                file = Image.FromFile(openFileDialog1.FileName);
-                pic.Image = file;
-                opened = true;
+                file = Image.FromFile(dr.FileName);
+                try
+                {
+                    if(file != null)
+                    pic.Image = file;
+                    opened = true;
+                    
+                }
+                catch
+                {
+                    MessageBox.Show("Sorry, something when wrong. Please try again");
+                }
             }
         }
 
@@ -284,6 +294,11 @@ namespace Ver1
             int temp = int.Parse(lineSize.Text);
                 if(temp > 1) lineSize.Text = (temp - 1).ToString();
                 else MessageBox.Show("Cannot decrease when size equal to 1");            
+        }
+
+        private void FontBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
 
         private void btn_eraser_Click(object sender, EventArgs e)
