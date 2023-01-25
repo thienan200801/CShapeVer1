@@ -145,6 +145,9 @@ namespace Ver1
         private void b1_Click(object sender, EventArgs e)
         {
             reload();
+            red_trackBar.Value = 0;
+            green_trackBar.Value = 0;
+            blue_trackBar.Value = 0;
         }
 
 
