@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.dec);
             this.panel1.Controls.Add(this.pic_color);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 30);
+            this.panel1.Location = new System.Drawing.Point(0, 28);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1382, 122);
             this.panel1.TabIndex = 0;
@@ -124,6 +124,7 @@
             this.FontBox.Name = "FontBox";
             this.FontBox.Size = new System.Drawing.Size(156, 24);
             this.FontBox.TabIndex = 13;
+            this.FontBox.SelectedIndexChanged += new System.EventHandler(this.FontBox_SelectedIndexChanged);
             // 
             // btn_text
             // 
@@ -312,7 +313,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1382, 30);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 28);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -323,41 +324,41 @@
             this.savePage,
             this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newPage
             // 
             this.newPage.Name = "newPage";
-            this.newPage.Size = new System.Drawing.Size(128, 26);
+            this.newPage.Size = new System.Drawing.Size(224, 26);
             this.newPage.Text = "New";
             this.newPage.Click += new System.EventHandler(this.newPage_Click);
             // 
             // savePage
             // 
             this.savePage.Name = "savePage";
-            this.savePage.Size = new System.Drawing.Size(128, 26);
+            this.savePage.Size = new System.Drawing.Size(224, 26);
             this.savePage.Text = "Save";
             this.savePage.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(128, 26);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.openToolStripMenuItem.Text = "Open";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // effectToolStripMenuItem
             // 
             this.effectToolStripMenuItem.Name = "effectToolStripMenuItem";
-            this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
+            this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
             this.effectToolStripMenuItem.Text = "Effect";
             this.effectToolStripMenuItem.Click += new System.EventHandler(this.effectToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -373,9 +374,9 @@
             // pic
             // 
             this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic.Location = new System.Drawing.Point(0, 152);
+            this.pic.Location = new System.Drawing.Point(0, 150);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(1382, 478);
+            this.pic.Size = new System.Drawing.Size(1382, 480);
             this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic.TabIndex = 3;
             this.pic.TabStop = false;
