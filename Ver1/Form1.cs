@@ -30,6 +30,10 @@ namespace Ver1
                 FontBox.Items.Add(font.Name.ToString());
             }
             FontBox.SelectedItem = "Arial";
+            for(int i = 1; i < 100; i++)
+            {
+                TextSizeBox.Items.Add(i.ToString());
+            }
             TextSizeBox.SelectedItem = "8";
         }
 
@@ -47,7 +51,6 @@ namespace Ver1
         Boolean opened = false;
 
         int Size = 1;
-        int SizeFont = 8;
         Font fontSelection = new Font("Arial", 1);
         SolidBrush drawBrush = new SolidBrush(Color.Black);
 
@@ -251,7 +254,8 @@ namespace Ver1
 
         private void DrawText(int x, int y)
         {
-            Font myFont = new System.Drawing.Font(FontBox.SelectedItem.ToString(), 40, FontStyle.Italic);
+        int SizeFont = 8;
+            Font myFont = new System.Drawing.Font(FontBox.SelectedItem.ToString(), (float)Convert.ToDouble(TextSizeBox.SelectedItem), FontStyle.Italic);
 
             Brush myBrush = new SolidBrush(new_color);
             string str = txt.Text;
