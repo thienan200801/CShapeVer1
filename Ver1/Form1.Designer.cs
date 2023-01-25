@@ -83,7 +83,7 @@
             this.panel1.Controls.Add(this.dec);
             this.panel1.Controls.Add(this.pic_color);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 28);
+            this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1382, 122);
             this.panel1.TabIndex = 0;
@@ -312,7 +312,7 @@
             this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1382, 28);
+            this.menuStrip1.Size = new System.Drawing.Size(1382, 30);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -323,7 +323,7 @@
             this.savePage,
             this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 24);
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(46, 26);
             this.fileToolStripMenuItem.Text = "File";
             // 
             // newPage
@@ -350,14 +350,14 @@
             // effectToolStripMenuItem
             // 
             this.effectToolStripMenuItem.Name = "effectToolStripMenuItem";
-            this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 24);
+            this.effectToolStripMenuItem.Size = new System.Drawing.Size(61, 26);
             this.effectToolStripMenuItem.Text = "Effect";
             this.effectToolStripMenuItem.Click += new System.EventHandler(this.effectToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 24);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(47, 26);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -373,9 +373,9 @@
             // pic
             // 
             this.pic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pic.Location = new System.Drawing.Point(0, 150);
+            this.pic.Location = new System.Drawing.Point(0, 152);
             this.pic.Name = "pic";
-            this.pic.Size = new System.Drawing.Size(1382, 480);
+            this.pic.Size = new System.Drawing.Size(1382, 478);
             this.pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic.TabIndex = 3;
             this.pic.TabStop = false;
