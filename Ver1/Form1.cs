@@ -13,8 +13,8 @@ namespace Ver1
         public Form1()
         {
             InitializeComponent();
-            //this.Width = 900;
-            //this.Height = 700;
+            this.Width = 1100;
+            this.Height = 700;
             bm = new Bitmap(pic.Width, pic.Height);
             g = Graphics.FromImage(bm);
             g.Clear(Color.White);
@@ -48,11 +48,10 @@ namespace Ver1
         ColorDialog cd = new ColorDialog();
         Color new_color = Color.Black;
         Image file;
-        Boolean opened = false;
-
-        int Size = 1;
         Font fontSelection = new Font("Arial", 1);
         SolidBrush drawBrush = new SolidBrush(Color.Black);
+        Boolean opened = false;
+        int Size = 1;
 
         private void pic_MouseDown(object sender, MouseEventArgs e)
         {
